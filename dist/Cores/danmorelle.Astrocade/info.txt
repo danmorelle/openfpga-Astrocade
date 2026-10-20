@@ -4,7 +4,9 @@ Port of the MiSTer Astrocade core (MikeJ's Bally Astrocade design,
 T80 Z80 CPU by Daniel Wallner, MiSTer port by Kitrinx and others).
 
 Needs the BIOS: Assets/astrocade/common/astrocade.rom (8192 bytes,
-often called astro.bin). Cartridges: .bin, up to 8 KB.
+often called astro.bin or astrocade.bin, so rename it). If the screen
+stays black after loading a game, the BIOS is missing or misnamed.
+Cartridges: .bin, up to 8 KB.
 
 Controls
   D-pad Joystick    A Trigger      L/R Turn the knob

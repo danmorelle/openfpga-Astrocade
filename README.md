@@ -5,16 +5,18 @@ An openFPGA core for the Analogue Pocket that recreates the Bally Astrocade
 a Z80 CPU and Bally's custom video and sound chips. It is a port of the
 [MiSTer Astrocade core](https://github.com/MiSTer-devel/Astrocade_MiSTer).
 
-**Status: early test build (0.1.0).** It works in simulation; it has not been
-tested on real hardware yet.
+**Status: 0.1.0, first release.** Tested in simulation and on a Pocket (the
+BIOS menu and Muncher).
 
 ## Installing
 
 1. Download the latest release zip and copy its contents to the root of your
    Pocket's SD card.
-2. Put the Astrocade BIOS in `Assets/astrocade/common/` named
-   `astrocade.rom`. It must be the 8 KB BIOS (often called `astro.bin`). It is
-   not included.
+2. Put the Astrocade BIOS in `Assets/astrocade/common/` named exactly
+   `astrocade.rom`. It must be the 8 KB BIOS, often called `astro.bin` or
+   `astrocade.bin`, so rename it. It is not included. **If the screen stays
+   black after loading a game, the BIOS is missing or has the wrong name**
+   (the Pocket does not warn about it).
 3. Put your cartridge images (`.bin`, up to 8 KB) in the same folder.
 
 ## Controls
