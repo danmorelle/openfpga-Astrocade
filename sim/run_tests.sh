@@ -6,6 +6,7 @@
 #   * buttons, the Select shift and the knob reach the console
 #   * reloading a smaller cartridge leaves nothing behind
 #   * the Reset setting, controller swapping, sound
+#   * the stack, RAM, IM 2 interrupts and screen RAM
 set -e
 cd "$(dirname "$0")"
 mkdir -p roms out
@@ -64,6 +65,10 @@ expect out/reload.log 2 right $MARK "8 KB cartridge loaded"
 expect out/reload.log 4 right $IDLE "reload: nothing left over past the end of the 4 KB file"
 expect_line out/reload.log "\[frame 5\] core running" "Reset restarts the console"
 expect out/reload.log 6 right $IDLE "runs again after Reset"
+
+# Stack, RAM, IM 2 interrupts and screen RAM (what real games rely on)
+./obj_dir/Vtb_top +cart=roms/test_full.bin +frames=4 +out=out/full > out/full.log 2>&1
+expect out/full.log 3 right ff3300 "stack, RAM, interrupts and screen RAM work"
 
 iverilog -g2012 -o out/input_test.vvp input_test.v ../src/fpga/core/pocket/input_map.v
 res=$(vvp out/input_test.vvp | grep "input_test:")
