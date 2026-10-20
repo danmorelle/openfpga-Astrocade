@@ -1,0 +1,20 @@
+{
+  "input": {
+    "magic": "APF_VER_1",
+    "controllers": [
+      {
+        "type": "default",
+        "mappings": [
+          { "id": 0, "name": "Trigger", "key": "pad_btn_a" },
+          { "id": 1, "name": "Keypad 1", "key": "pad_btn_b" },
+          { "id": 2, "name": "Keypad 2", "key": "pad_btn_x" },
+          { "id": 3, "name": "Keypad 3", "key": "pad_btn_y" },
+          { "id": 4, "name": "Knob Left", "key": "pad_trig_l" },
+          { "id": 5, "name": "Knob Right", "key": "pad_trig_r" },
+          { "id": 6, "name": "Keypad =", "key": "pad_btn_start" },
+          { "id": 7, "name": "Keypad Shift", "key": "pad_btn_select" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+# Astrocade core sources (paths relative to this file)
+# Pocket glue
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "pocket/pll_astrocade.v"]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "pocket/slot_loader.v"]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "pocket/input_map.v"]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "pocket/video_apf.v"]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "pocket/audio_apf.v"]
+# MiSTer Astrocade core (MikeJ's Bally design, T80 by Daniel Wallner), unchanged
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "astrocade/Astrocade_input.sv"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/T80/T80_Reg.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/T80/T80_MCode.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/T80/T80_ALU.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/T80/T80.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/T80/T80s.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/bram.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/bally_col_pal.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/bally_rams.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/bally_io.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/bally_addr.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/bally_data.vhd"]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "astrocade/bally.vhd"]
